@@ -15,7 +15,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='memegen',
-    version='0.0.1',
+    version='0.0.2',
     description='Caption memes from command line, supports multiple services.',
     author='Cristian Cabrera',
     author_email='surrealcristian@gmail.com',
