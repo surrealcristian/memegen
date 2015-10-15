@@ -8,11 +8,17 @@ __author__ = 'Cristian Cabrera'
 __version__ = '0.0.1'
 __license__ = 'MIT'
 
-MEME_GENERATOR_USERNAME = 'testapi'
-MEME_GENERATOR_PASSWORD = 'testapi'
+__all__ = [
+    'BaseCreator',
+    'MemeGeneratorCreator',
+    'ImgFlipCreator',
+]
 
-IMG_FLIP_USERNAME = 'testapi'
-IMG_FLIP_PASSWORD = 'testapi'
+MEME_GENERATOR_USERNAME = 'YOUR_USERNAME'
+MEME_GENERATOR_PASSWORD = 'YOUR_PASSWORD'
+
+IMG_FLIP_USERNAME = 'YOUR_USERNAME'
+IMG_FLIP_PASSWORD = 'YOUR_PASSWORD'
 
 
 # ========
@@ -167,12 +173,13 @@ def _parse_args():
     import argparse
     parser = argparse.ArgumentParser(description='Meme generator')
     arg = parser.add_argument
-    arg('-l', '--list', action='store_true')
+    arg('-l', '--list', action='store_true',
+        help='lists available memes for the service')
     arg('meme', nargs='?')
     arg('top', nargs='?')
     arg('bottom', nargs='?')
     arg('-s', '--service', choices=['imgflip', 'memegenerator'],
-        default='imgflip')
+        default='imgflip', help='defaults to imgflip')
     args = parser.parse_args()
     return parser, args
 
@@ -201,3 +208,5 @@ if __name__ == '__main__':
                 creator.create(meme, top, bottom)
             except Exception as e:
                 parser.error(str(e))
+    else:
+        parser.print_help()
