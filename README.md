@@ -11,7 +11,9 @@ Caption memes from command line, the easy way.
 
 ## Installation
 
-- Install the latest stable release with `pip install memegen` or ...
+- Install the latest stable release with `pip install memegen` 
+
+Or
 
 - Install dependencies (`pip install requests`) and download
   [memegen.py](https://raw.githubusercontent.com/surrealcristian/memegen/master/memegen.py)
