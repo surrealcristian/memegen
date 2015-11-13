@@ -11,12 +11,25 @@ Caption memes from command line, the easy way.
 
 ## Installation
 
-- Install the latest stable release with `pip install kl` or ...
+- Install the latest stable release with `pip install memegen` 
+
+Or
 
 - Install dependencies (`pip install requests`) and download
   [memegen.py](https://raw.githubusercontent.com/surrealcristian/memegen/master/memegen.py)
   (unstable).
 
+
+## Configuration
+
+You should change these variables with the proper value:
+```python
+MEME_GENERATOR_USERNAME = 'YOUR_USERNAME'
+MEME_GENERATOR_PASSWORD = 'YOUR_PASSWORD'
+
+IMG_FLIP_USERNAME = 'YOUR_USERNAME'
+IMG_FLIP_PASSWORD = 'YOUR_PASSWORD'
+```
 
 ## CLI usage
 
