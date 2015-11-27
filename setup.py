@@ -23,7 +23,8 @@ setup(
     keywords='caption images memes cli terminal imgflip memegenerator service',
     install_requires=['requests>=2'],
     license='MIT',
-    py_modules = ['memegen'],
+    py_modules=['memegen'],
+    scripts=['memegen.py'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
